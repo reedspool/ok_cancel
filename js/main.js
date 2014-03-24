@@ -1,37 +1,33 @@
 require.config({
 	paths: {
-		'2014budget' : '../resources/2014budget',
-		chart: './chart',
-		'jquery-dethrottle': './jquery.ba-throttle-debounce'
+		game: './game'
 	},
     shim: {
-	    stativus: {
-			exports: 'Stativus'
-	    },
-	    underscore: {
-			exports: '_'
-	    },
-		backbone: {
-			deps: ['underscore', 'jquery'],
-		    exports: 'Backbone'
-	    },
-	    d3: {
-            exports: 'd3'
-        }
 	}
 });
 
-	//the 'main' function 
-require(['jquery', 'underscore', 
-	'backbone', 'q',
-	'd3', '2014budget', 'chart'],
-	function ($, _, Backbone, Q, d3, budget, chart) {
- 		log = function (m) { console.log(m) };
-        
-        chart.setup(budget);
+require([ 'game' ], function (game) {
+	log = function (m) { console.log(m) };
 
-		log('hello world')
- 		log(chart)
- 		log(budget)
- 		log(d3)
+	game.run({
+		text: 'Welcome to the little game!',
+		ok: {
+			text: 'Get excited!',
+			ok: {
+				text: 'You find yourself in a wood',
+				ok: {
+					text: 'It is very dark...',
+					ok: {
+						text: 'There\'s a bear!!',
+						ok: {
+							text: 'You reach for your gun...'
+						},
+						cancel: {
+							text: 'You run for your life'
+						}
+					}
+				}
+			}
+		}
 	});
+});
