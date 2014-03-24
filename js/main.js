@@ -3,6 +3,9 @@ require.config({
 		game: './game'
 	},
     shim: {
+	    underscore: {
+			exports: '_'
+	    }
 	}
 });
 
@@ -10,8 +13,10 @@ require([ 'game' ], function (game) {
 	log = function (m) { console.log(m) };
 
 	game.run({
+		name: 'begin',
 		text: 'Welcome to the little game!',
 		ok: {
+			name: 'excited',
 			text: 'Get excited!',
 			ok: {
 				text: 'You find yourself in a wood',
@@ -22,12 +27,23 @@ require([ 'game' ], function (game) {
 						ok: {
 							text: 'You reach for your gun...'
 						},
-						cancel: {
-							text: 'You run for your life'
-						}
-					}
+						cancel: 'run'
+					},
+					cancel: 'run'
 				}
 			}
+		},
+		cancel: 'gameover'
+	}, {
+		name: 'run',
+		text: 'You run for your life',
+		ok: {
+			text: 'Play again?',
+			ok: 'begin',
+			cancel: 'gameover'
 		}
-	});
+	}, {
+		name: 'gameover',
+		text: 'tootaloo!'
+	}); 
 });
