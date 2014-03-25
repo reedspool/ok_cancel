@@ -16,7 +16,6 @@ require([ 'game' ], function (game) {
 		name: 'begin',
 		text: 'Welcome to the little game!',
 		ok: {
-			name: 'excited',
 			text: 'Get excited!',
 			ok: {
 				text: 'You find yourself in a wood',

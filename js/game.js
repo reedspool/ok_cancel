@@ -9,7 +9,7 @@ define(['underscore'], function (_) {
 
 	return contract;
 
-	function run(s,t,a,t,e) {
+	function run(s,t,a,t,e,s) {
 		var states = arguments;
 		_.each(states, readInMap);
 
