@@ -1,0 +1,53 @@
+define([], function () {
+	return [
+		{
+			text: 'Welcome to the little game!',
+
+			NAME: 'BEGIN',
+			OK: 'TWO',
+			
+		},{
+			text: 'Get excited!',
+
+			NAME: 'TWO',
+			OK: 'THREE',
+			CANCEL: 'PLAY_AGAIN'
+		}, {
+			text: 'You find yourself in a wood',
+
+			NAME: 'THREE',
+			OK: 'FOUR',
+			CANCEL: 'RUN'
+		}, {
+			text: 'It is very dark...',
+
+			NAME: 'FOUR',
+			OK: 'FIVE',
+			CANCEL: 'RUN'
+		}, {
+			text: 'There\'s a bear!!',
+
+			NAME: 'FIVE',
+			OK: 'SIX',
+			CANCEL: 'RUN'
+		}, {
+			text: 'You reach for your gun...',
+
+			NAME: 'SIX',
+			OK: 'PLAY_AGAIN',
+			CANCEL: 'RUN'
+		}, {
+			text: 'You RUN for your life!',
+
+			NAME: 'RUN',
+			OK: 'PLAY_AGAIN',
+			CANCEL: 'PLAY_AGAIN'
+		}, {
+			text: 'Play again?',
+
+			NAME: 'PLAY_AGAIN',
+			OK: 'BEGIN',
+			CANCEL: 'END'
+		}
+	]
+});
