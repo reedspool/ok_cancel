@@ -7,6 +7,15 @@
 	<link rel="stylesheet" href="custom.css">
 </head>
 <body>
-  <script data-main="js/main" src="js/require.js"></script>
+
+
+  	<script data-main="js/main" src="js/require.js"></script>
+	<script>
+		require(['game','theWoods'], function (game, theWoods) {
+			game.create(theWoods).run();
+
+			function log(m) { console.log(m) };
+		});
+	</script>
 </body>
 </html>
