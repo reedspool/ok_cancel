@@ -1,0 +1,18 @@
+<div class="list">
+	<div 
+		ng-repeat="place in game.current.places" 
+		class="place {{ staged.place.NAME == place.NAME  ? 'active' : '' }}"
+		ng-click="select(place)"
+	>
+
+		<h5 class="name">{{ place.NAME }}</h5>
+
+		<p class="text">{{ place.text }}</p>
+
+		<span class="ok">Ok: <a ui-sref="home.browse({ placeId: place.OK })">{{ place.OK }}</a></span>
+
+		<span class="cancel">Cancel: <a ui-sref="home.browse({ placeId: place.CANCEL })">{{ place.CANCEL }}</a></span>
+		
+
+	</div>
+</div>

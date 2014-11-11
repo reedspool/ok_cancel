@@ -1,0 +1,76 @@
+/* app css stylesheet */
+body {
+  margin: 20px;
+}
+
+/* list view */
+.list {
+  height: 600px;
+  width: 250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.place {
+  margin: 5px;
+  padding: 2px;
+
+  background-color: rgba(200, 230, 255, .8);
+  border: 5px inset rgba(200, 200, 255, .5);
+  display: block;
+  width: 200px;
+}
+
+.place.active {
+  background-color: rgba(255, 230, 200, .8);
+  border: 5px inset rgba(200, 150, 150, .5);
+}
+/* end list view */
+
+
+
+/* directed graph viz */
+/* Taken from http://bl.ocks.org/mbostock/1153292 */
+  .link {
+    fill: none;
+    stroke: #666;
+    stroke-width: 1.5px;
+  }
+
+  .link.ok {
+    stroke: green;
+  }
+
+  .link.cancel {
+    stroke: red;
+    stroke-dasharray: 0,2 1;
+  }
+
+  circle {
+    fill: #ccc;
+    stroke: #333;
+    stroke-width: 1.5px;
+  }
+
+  circle.focus {
+    fill: #aad;
+    stroke: #000;
+    stroke-width: 1.8px;
+  }
+
+  text {
+    font: 10px sans-serif;
+    pointer-events: none;
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+  }
+
+  .directed-graph {
+    border: 4px outset rgba(200, 200, 200, .5);
+    display: inline-block;
+    padding: 5px;
+
+    /* positioning */
+    position: absolute;
+    right: 10%;
+  }
+  /* end directed graph viz 

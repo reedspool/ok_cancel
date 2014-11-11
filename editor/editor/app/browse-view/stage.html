@@ -1,0 +1,26 @@
+<div class="stage">
+	<div class="place active">
+		<a >{{ user.name || "empty" }}</a>
+
+		<h5 
+			editable-text="staged.place.NAME"
+			onaftersave="updatePlace(staged)"
+			class="name"
+		>
+			{{ staged.place.NAME }}
+		</h5>
+
+		<p 
+			editable-text="staged.place.text"
+			onaftersave="updatePlace(staged)"
+			class="text"
+		>
+			{{ staged.place.text }}
+		</p>
+
+		<span class="ok">Ok: <a ui-sref="home.browse({ placeId: staged.place.OK })">{{ staged.place.OK }}</a></span>
+
+		<span class="cancel">Cancel: <a ui-sref="home.browse({ placeId: staged.place.CANCEL })">{{ staged.place.CANCEL }}</a></span>
+
+	</div>
+</div>
